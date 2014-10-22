@@ -83,8 +83,8 @@ var Board = function() {
     pieceTheme: '../img/wikipedia/{piece}.png'
   });
 
-  /** @private {PlayingLine} */
-  this.playingLine_ = null;
+  /** @private {Line} */
+  this.line_ = null;
 };
 
 

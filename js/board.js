@@ -88,6 +88,10 @@ var Board = function() {
 };
 
 
+/**
+ * @param {!Array.<!Move>} moves
+ * @param {boolean} isWhite
+ */
 Board.prototype.initialize = function(moves, isWhite) {
   this.line_ = new Line(moves, isWhite);
   this.board_.start();
@@ -95,6 +99,11 @@ Board.prototype.initialize = function(moves, isWhite) {
 };
 
 
+/**
+ * @param {!Position} oldPos
+ * @param {!Position} newPos
+ * @private
+ */
 Board.prototype.onChange_ = function(oldPos, newPos) {
   if (this.line_.isComputerMoveNext()) {
     var computerMove = this.line_.advance();
@@ -104,6 +113,15 @@ Board.prototype.onChange_ = function(oldPos, newPos) {
 };
 
 
+/**
+ * @param {string} source
+ * @param {string} target
+ * @param {string} piece
+ * @param {!Position} oldPos
+ * @param {!Position} newPos
+ * @param {string} orientation
+ * @private
+ */
 Board.prototype.onDrop_ = function(
     source, target, piece, newPos, oldPos, orientation) {
   if (!this.line_.equalsNextMove(new Move(source, target))) {

@@ -68,13 +68,19 @@ Line.prototype.equalsNextMove = function(move) {
       this.moves_[this.progress_].equals(move);
 };
 
+/** @return {boolean} */
+Line.prototype.isDone = function() {
+  return this.progress_ >= this.moves_.length;
+}
+
 
 /**
+ * @param {!Function} onDoneFn
  * @constructor
  * @struct
  * @final
  */
-var Board = function() {
+var Board = function(onDoneFn) {
   /** @private {!ChessBoard} */
   this.board_ = new ChessBoard('board', {
     draggable: true,
@@ -85,6 +91,9 @@ var Board = function() {
 
   /** @private {Line} */
   this.line_ = null;
+
+  /** @private {!Function} */
+  this.onDoneFn_ = onDoneFn;
 };
 
 
@@ -110,6 +119,10 @@ Board.prototype.onChange_ = function(oldPos, newPos) {
     setTimeout(
         this.board_.move.bind(this.board_, computerMove.asString()), 500);
   }
+
+  if (this.line_.isDone()) {
+    setTimeout(this.onDoneFn_, 1000);
+  }
 };
 
 
@@ -133,24 +146,33 @@ Board.prototype.onDrop_ = function(
 
 
 var main = function() {
-  var b = new Board();
-  var moves = [
-    new Move('d2', 'd4'),
-    new Move('d7', 'd5'),
-    new Move('c2', 'c4'),
-    new Move('d5', 'c4'),
-    new Move('g1', 'f3'),
-    new Move('b7', 'b5'),
-    new Move('a2', 'a4'),
-    new Move('c7', 'c6'),
-    new Move('a4', 'b5'),
-    new Move('c6', 'b5'),
-    new Move('b1', 'c3'),
-    new Move('a7', 'a6'),
-    new Move('c3', 'b5')
+  var benko = 'd2 d4, g8 f6, c2 c4, c7 c5, d4 d5, b7 b5';
+  var continuations = [
+    'c4 b5, a7 a6, b5 a6, g7 g6'
   ];
-  var isWhite = false;
-  b.initialize(moves, isWhite);
+  var lines = getLinesFromOpening(benko, continuations)
+
+  var b = null;
+  var onDoneFn = function() {
+    var moves = lines[Math.floor(Math.random() * lines.length)]
+    b.initialize(moves, false /* isWhite */);
+  };
+  var b = new Board(onDoneFn);
+  onDoneFn();
+};
+
+var getLinesFromOpening = function(opening, continuations) {
+  var lines = [];
+  for (var i = 0; i < continuations.length; i++) {
+    var raw_line = (opening + ', ' + continuations[i]).split(',');
+    var line = []
+    for (var j = 0; j < raw_line.length; j++) {
+      var raw_move = raw_line[j].trim().split(' ');
+      line.push(new Move(raw_move[0], raw_move[1]));
+    }
+    lines.push(line);
+  }
+  return lines;
 };
 
 

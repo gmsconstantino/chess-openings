@@ -147,18 +147,20 @@ Board.prototype.onDrop_ = function(
 
 var main = function() {
   var b = null;
-  var lines = [];
-  lines = lines.concat(getLines_benkoFullyAccepted());
+  var openings = [];
+  openings = openings.concat(getOpening_benkoFullyAccepted());
 
   var onDoneFn = function() {
-    var moves = lines[Math.floor(Math.random() * lines.length)];
-    b.initialize(moves, false /* isWhite */);
+    var opening = openings[Math.floor(Math.random() * openings.length)];
+    var lines = opening.lines;
+    var line = lines[Math.floor(Math.random() * lines.length)];
+    b.initialize(line, opening.isWhite);
   };
   var b = new Board(onDoneFn);
   onDoneFn();
 };
 
-var getLines_benkoFullyAccepted = function() {
+var getOpening_benkoFullyAccepted = function() {
   var opening = 'd2 d4, g8 f6, c2 c4, c7 c5, d4 d5, b7 b5, c4 b5, a7 a6, ' +
       'b5 a6, g7 g6';
   var continuations = [
@@ -227,7 +229,10 @@ var getLines_benkoFullyAccepted = function() {
     'e2 e3, d7 d6, g1 f3, f8 g7, b1 c3, e8 g8, f1 c4, c8 a6, c4 a6, b8 a6',
     'e2 e3, d7 d6, g1 f3, f8 g7, b1 c3, e8 g8, e3 e4, b8 d7'
   ];
-  return getLinesFromOpening(opening, continuations);
+  return {
+    lines: getLinesFromOpening(opening, continuations),
+    isWhite: false
+  };
 };
 
 var getLinesFromOpening = function(opening, continuations) {

@@ -193,7 +193,7 @@ var getOpening_frenchAdvance = function() {
   var opening = 'e2 e4, e7 e6, d2 d4, d7 d5, e4 e5, c7 c5';
   var continuations = [
     // 4. c3
-    //'c2 c3, b8 c6, g1 f3, d8 b6, a2 a3, ',
+    'c2 c3, b8 c6, g1 f3, d8 b6, a2 a3, c5 c4',
     'c2 c3, b8 c6, g1 f3, d8 b6, f1 d3, c5 d4, c3 d4, c8 d7, e1 g1, c6 d4, ' +
         'f3 d4, b6 d4',
     'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, g8 h6, b2 b3, c5 d4, c3 d4, h6 f5, ' +

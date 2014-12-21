@@ -177,7 +177,7 @@ Board.prototype.onDrop_ = function(
 var main = function() {
   var b = null;
   var openings = [];
-  openings = openings.concat(getOpening_frenchAdvance());
+  openings = openings.concat(getOpening_qga());
 
   var onDoneFn = function() {
     var opening = openings[Math.floor(Math.random() * openings.length)];
@@ -219,6 +219,7 @@ var getOpening_frenchAdvance = function() {
 
     // 4. Nf3
     'g1 f3, c5 d4, f1 d3, b8 c6, e1 g1, g8 e7, b1 d2, e7 g6',
+    'g1 f3, c5 d4, f1 d3, b8 c6, f3 g5, c6 e5, g5 h7, e5 d3, d1 d3, f8 e7',
     'g1 f3, c5 d4, d1 d4, b8 c6, d4 f4, g8 e7, f1 d3, e7 g6, d3 g6, h7 g6, ' +
         'f3 g5, f7 f6, e5 f6, g7 f6, g5 f3, f8 h6',
     'g1 f3, c5 d4, d1 d4, b8 c6, d4 g4, g8 e7, f1 d3, e7 g6, d3 g6, h7 g6',
@@ -236,32 +237,37 @@ var getOpening_frenchAdvance = function() {
 };
 
 var getOpening_qga = function() {
-  var opening = 'd2 d4, d7 d5, c2 c4, d5 c4, g1 f3';
+  var opening = 'd2 d4, d7 d5, c2 c4, d5 c4, e2 e3';
   var continuations = [
     // 3 ... Nf6
 
-    // 3 ... a6
-
-    // 3 ... c6
-
-    // 3 ... c5
+    // 3 ... e5
 
     // 3 ... e6
 
-    // 3 ... Bf5
+    // 3 ... c5
 
-    // 3 ... Nc6
-
-    // 3 ... Bg4
+    // 3 ... c6
 
     // 3 ... b5
-    //'b7 b5, a2 a4, b5 b4, ',
-    'b7 b5, a2 a4, c7 c6, e2 e3, e7 e6, ',
-    'b7 b5, a2 a4, c7 c6, e2 e3, g8 f6, ',
-    'b7 b5, a2 a4, c7 c6, e2 e3, a7 a6, ',
-    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, c7 c6, c3 b5, c6 b5, b2 b3',
-    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, d8 d7, f3 e5',
+    'b7 b5, a2 a4, b5 b4, f1 c4',
+
     'b7 b5, a2 a4, a7 a6, a4 b5, a6 b5, a1 a8',
+    'b7 b5, a2 a4, c7 c6, a4 b5, c6 b5, d1 f3',
+    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, b5 a6, d1 f3, c7 c6, a1 a6, ' +
+        'b8 a6, f3 c6, d8 d7, c6 a8, d7 d8, a8 c6, d8 d7, c6 a6',
+    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, c7 c6, b2 b3, g8 f6, b3 c4, ' +
+        'b5 a6, c1 a3',
+    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, c7 c6, b2 b3, c4 b3, c3 b5, ' +
+        'c6 b5, f1 b5, b8 d7, d1 b3',
+    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, a7 a6, c3 b5, a6 b5, a1 a8',
+    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, d8 d7, g1 f3, f7 f6, f3 e5, ' +
+        'f6 e5, d1 h5, e8 d8, h5 f3, d8 e8, f3 a8',
+    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, d8 d7, g1 f3, f7 f6, f3 e5, ' +
+        'f6 e5, d1 h5, e8 d8, h5 f3, e5 e4, f3 f8',
+    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, d8 d7, g1 f3, f7 f6, f3 e5, ' +
+        'f6 e5, d1 h5, g7 g6, h5 e5, g8 f6, c3 b5, b8 c6, e5 c7',
+    'b7 b5, a2 a4, c8 d7, a4 b5, d7 b5, b1 c3, b5 d7, f1 c4'
 
     // 3 ... Be6
   ];

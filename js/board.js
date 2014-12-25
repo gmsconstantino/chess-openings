@@ -247,11 +247,14 @@ var getOpening_dutch = function() {
         'f6 e6, e1 c1',
     // 2 ... Nf6 3 Bg5 g6 4 Bxf6 exf6 5 e3
     'g8 f6, c1 g5, g7 g6, g5 f6, e7 f6, e2 e3, d7 d5, f1 d3',
-    // 2 ... g6 3 h4
+    // 2 ... g6 3 h4 Nf6 4 h5 gxh5 5 e4
     'g7 g6, h2 h4, g8 f6, h4 h5, g6 h5, e2 e4, f5 e4, c3 e4',
     'g7 g6, h2 h4, g8 f6, h4 h5, g6 h5, e2 e4, d7 d6, c1 g5',
-    'g7 g6, h2 h4, g8 f6, h4 h5, f6 h5, h1 h5, g6 h5, e2 e4, d7 d6, d1 h5, ' +
-        'e8 d7, h5 f5, e7 e6, f5 h3',
+    // 2 ... g6 3 h4 Nf6 4 h5 Nxh5 5 Rxh5 gxh5 6 e4 d6 7 Nh3
+    'g7 g6, h2 h4, g8 f6, h4 h5, f6 h5, h1 h5, g6 h5, e2 e4, d7 d6, g1 h3, ' +
+        'f5 e4, d1 h5, e8 d7, f1 c4, f8 g7, h5 f5, d7 e8, c4 f7, e8 f8, ' +
+        'f7 e6, g7 f6, c1 h6, f8 e8, f5 h5',
+    // 2 ... g6 3 h4 Bg7 4 h5 gxh5 5 e4
     'g7 g6, h2 h4, f8 g7, h4 h5, g6 h5, e2 e4, e7 e6, d1 h5, e8 f8, e4 f5, ' +
         'g8 f6, h5 h4, e6 f5, c1 h6',
     'g7 g6, h2 h4, f8 g7, h4 h5, g6 h5, e2 e4, d7 d6, d1 h5, e8 f8, f1 c4, ' +

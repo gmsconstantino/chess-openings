@@ -193,6 +193,7 @@ var main = function() {
   var b = null;
   var openings = [];
   openings = openings.concat(getOpening_dutch());
+  openings = openings.concat(getOpening_frenchAdvance());
 
   var onDoneFn = function() {
     var opening = openings[Math.floor(Math.random() * openings.length)];
@@ -213,7 +214,7 @@ var getOpening_dutch = function() {
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, c8 e6, e4 d5, e6 d5, c3 d5, ' +
         'd8 d5, d1 h5, d5 f7, h5 f5',
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, c8 e6, e4 d5, e6 d5, c3 d5, ' +
-        'd8 d5, e8 d8, f1 e2, b8 d7, e2 f3',
+        'd8 d5, d1 h5, e8 d8, f1 e2, b8 d7, e2 f3',
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, d5 e4, d1 h5, e8 d7, d4 d5, ' +
         'c7 c6, e1 c1, d7 c7, d5 c6',
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, d5 e4, d1 h5, e8 d7, d4 d5, ' +
@@ -237,9 +238,9 @@ var getOpening_dutch = function() {
         'b8 c6, c3 d5',
     'd7 d5, c1 g5, h7 h6, g5 h4, g7 g5, e2 e3, g5 h4, d1 h5, e8 d7, g1 f3, ' +
         'c7 c6, f3 e5, d7 c7, e5 f7, d8 e8, h5 g6',
-    // 2 ... Nf6 3 Bg5 e6? 4 e4
-    'g8 f6, c1 g5, e7 e6, e2 e4, f5 e4, c3 e4, f8 e7, g5 f6, g1 f3, e8 g8, ' +
-        'f1 d3, b8 c6, c2 c3, e4 f6',
+    // 2 ... Nf6 3 Bg5 e6 4 e4
+    'g8 f6, c1 g5, e7 e6, e2 e4, f5 e4, c3 e4, f8 e7, g5 f6, e7 f6, g1 f3, ' +
+        'e8 g8, f1 d3, b8 c6, c2 c3',
     'g8 f6, c1 g5, e7 e6, e2 e4, f8 e7, e4 f5, e6 f5, f1 c4',
     'g8 f6, c1 g5, e7 e6, e2 e4, h7 h6, g5 f6, d8 f6, e4 f5, e6 f5, d1 e2, ' +
         'f8 e7, c3 d5, f6 d6, d5 e7, d6 e7, e1 d2',
@@ -262,7 +263,7 @@ var getOpening_dutch = function() {
         'g8 f6, h5 h4, e6 f5, c1 h6',
     'g7 g6, h2 h4, f8 g7, h4 h5, g6 h5, e2 e4, d7 d6, d1 h5, e8 f8, f1 c4, ' +
         'd8 e8, h5 e8, f8 e8, c3 d5, e8 d7, e4 f5',
-    // 2 ... e6 3 e4 fxe4 4 Nxe4 d5? 5 Qh5+
+    // 2 ... e6? 3 e4 fxe4 4 Nxe4 d5? 5 Qh5+
     'e7 e6, e2 e4, f5 e4, c3 e4, d7 d5, d1 h5, g7 g6, h5 e5, d5 e4, e5 h8, ' +
         'g8 f6, c1 g5, b8 d7, e1 c1',
     'e7 e6, e2 e4, f5 e4, c3 e4, d7 d5, d1 h5, e8 e7, e4 g5, d8 e8, h5 h4, ' +
@@ -292,16 +293,45 @@ var getOpening_frenchAdvance = function() {
     // 4 c3 Nc6 5 Nf3 Qb6 6 Bd3 cxd4
     'c2 c3, b8 c6, g1 f3, d8 b6, f1 d3, c5 d4, c3 d4, c8 d7, e1 g1, c6 d4, ' +
         'f3 d4, b6 d4',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 d3, c5 d4, f3 d4, c6 e5',
 
-    // 4 c3 Nc6 5 Nf3 Qb6 6 Be2 Nh6
-    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, g8 h6, b2 b3, c5 d4, c3 d4, h6 f5, ' +
-        'c1 b2, f8 b4, e1 f1, e8 g8',
-    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, g8 h6, c1 h6, b6 b2, b1 d2, g7 h6, ' +
-        'a1 c1, b2 a2',
-    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, g8 h6, c1 h6, b6 b2, h6 g7, f8 g7, ' +
-        'b1 d2, b2 c3, a1 c1, c3 a3, e1 g1, c5 d4',
-    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, g8 h6, c1 h6, b6 b2, h6 g7, f8 g7, ' +
-        'b1 d2, b2 c3, a1 c1, c3 a3, d4 c5, c6 e5',
+    // 4 c3 Nc6 5 Nf3 Qb6 6 Be2 cxd4 7 Nxd4? Nxe5 8 Bf4 Bd6 9 Be3 Qd8
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, f3 d4, c6 e5, c1 f4, f8 d6, ' +
+        'f4 e3, b6 d8',
+
+    // 4 c3 Nc6 5 Nf3 Qb6 6 Be2 cxd4 7 cxd4 Nh6 8 Bd3 Bd7
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, e2 d3, c8 d7',
+
+    // 4 c3 Nc6 5 Nf3 Qb6 6 Be2 cxd4 7 cxd4 Nh6 8 Nc3 Nf5
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, b1 c3, h6 f5',
+
+    // 4 c3 Nc6 5 Nf3 Qb6 6 Be2 cxd4 7 cxd4 Nh6 8 Bxh6 Qxb2
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, c1 h6, b6 b2, ' +
+        'e1 g1, g7 h6, b1 d2, c6 d4, f3 d4, b2 d4, e2 b5, c8 d7, b5 d7, ' +
+        'e8 d7, d1 b3, d4 b4',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, c1 h6, b6 b2, ' +
+        'e1 g1, g7 h6, b1 d2, c6 d4, a1 b1, d4 e2, d1 e2, b2 a3, e2 b5, ' +
+        'c8 d7, b5 b7, a8 c8',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, c1 h6, b6 b2, ' +
+        'h6 g7, f8 g7, b1 d2, c6 d4, f3 d4, b2 d4',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, c1 h6, b6 b2, ' +
+        'h6 g7, f8 g7, b1 d2, c6 d4, d1 a4, d4 c6, a1 b1, b2 c3',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, c1 h6, b6 b2, ' +
+        'h6 e3, b2 a1',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, c1 h6, b6 b2, ' +
+        'h6 d2, b2 a1',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, c1 h6, b6 b2, ' +
+        'b1 c3, b2 c3, h6 d2, c3 a3',
+
+    // 4 c3 Nc6 5 Nf3 Qb6 6 Be2 cxd4 7 cxd4 Nh6 8 b3? Bb4+
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, b2 b3, f8 b4, ' +
+        'e1 f1, e8 g8',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, b2 b3, f8 b4, ' +
+        'c1 d2, h6 f5, d2 b4, b6 b4, d1 d2, f5 d4, d2 b4, d4 f3, e2 f3, c6 b4',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, b2 b3, f8 b4, ' +
+        'c1 d2, h6 f5, d2 b4, b6 b4, d1 d2, f5 d4, f3 d4, b4 d4, d2 d4, c6 d4',
+    'c2 c3, b8 c6, g1 f3, d8 b6, f1 e2, c5 d4, c3 d4, g8 h6, b2 b3, f8 b4, ' +
+        'b1 d2, c6 d4, f3 d4, b6 d4, a1 b1, d4 e5, e1 g1, e8 g8',
 
     // 4 c3 Nc6 5 Be3 Qb6 6 Qd2 Bd7 7 Nf3 Rc8
     'c2 c3, b8 c6, c1 e3, d8 b6, d1 d2, c8 d7, g1 f3, a8 c8, d4 c5, f8 c5, ' +

@@ -208,19 +208,26 @@ var main = function() {
 var getOpening_dutch = function() {
   var opening = 'd2 d4, f7 f5, b1 c3';
   var continuations = [
-    // 2 ... d5 3 Bg5 Nf6 4 Bxf6
+    // 2 ... d5 3 Bg5 Nf6 4 Bxf6 exf6 5 e3
     'd7 d5, c1 g5, g8 f6, g5 f6, e7 f6, e2 e3',
-    'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, e7 e6',
+    // 2 ... d5 3 Bg5 Nf6 4 Bxf6 gxf6 5 e4 e6 6 Qh5+
+    'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, e7 e6, d1 h5, e8 e7, e4 d5, ' +
+        'e6 d5, e1 c1',
+    'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, e7 e6, d1 h5, e8 d7, e4 d5, ' +
+        'e6 d5, c3 d5',
+    // 2 ... d5 3 Bg5 Nf6 4 Bxf6 gxf6 5 e4 Be6 6 exd5
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, c8 e6, e4 d5, e6 d5, c3 d5, ' +
         'd8 d5, d1 h5, d5 f7, h5 f5',
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, c8 e6, e4 d5, e6 d5, c3 d5, ' +
         'd8 d5, d1 h5, e8 d8, f1 e2, b8 d7, e2 f3',
+    // 2 ... d5 3 Bg5 Nf6 4 Bxf6 gxf6 5 e4 dxe4 6 Qh5+
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, d5 e4, d1 h5, e8 d7, d4 d5, ' +
         'c7 c6, e1 c1, d7 c7, d5 c6',
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, d5 e4, d1 h5, e8 d7, d4 d5, ' +
         'c7 c5, h5 f5, d7 e8, f5 h5',
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, d5 e4, d1 h5, e8 d7, d4 d5, ' +
         'e7 e6, d5 e6, d7 e6, f1 c4',
+    // 2 ... d5 3 Bg5 Nf6 4 Bxf6 gxf6 5 e4 fxe4 6 Qh5+
     'd7 d5, c1 g5, g8 f6, g5 f6, g7 f6, e2 e4, f5 e4, d1 h5, e8 d7, h5 d5, ' +
         'd7 e8, d5 h5, e8 d7, e1 c1',
     // 2 ... d5 3 Bg5 h6 4 Bh4 g5 5 e3 gxh4 6 Qh5+ Kd7 7 Nf3

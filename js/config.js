@@ -1,6 +1,5 @@
 var getOpenings = function() {
   return [
-    getOpening_dutch(),
-    getOpening_frenchAdvance()
+    getOpening_albin()
   ];
 };

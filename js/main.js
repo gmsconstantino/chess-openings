@@ -1,19 +1,47 @@
 var main = function() {
   var b = null;
   var openings = [];
-  var openingsList = getOpenings();
-  for (var i = 0; i < openingsList.length; i++) {
-    openings = openings.concat(openingsList[i]);
-  }
-
+  
   var onDoneFn = function() {
-    var opening = openings[Math.floor(Math.random() * openings.length)];
-    var lines = opening.lines;
-    var line = lines[Math.floor(Math.random() * lines.length)];
-    b.initialize(line, opening.isWhite);
+    const openingName = '*';
+    var opening = openings.filter(o => {
+      return openingName === '*' ? true : o.name.includes(openingName)
+    });
+    // var lines = opening.length;
+    var obj = opening[Math.floor(Math.random() * opening.length)];
+    
+    // const playerColor = 'white';
+    const playerColor = 'black';
+
+    if(obj) {
+      b.initialize(obj.line, playerColor);
+      $('#variation').text(obj.name);
+      console.log(obj.moves)
+      window.opening = obj
+    } else {
+      $('#status').html('Error!!!!!')
+    }
   };
-  var b = new Board(onDoneFn);
-  onDoneFn();
+  var b = new Board(() => { 
+    b.updateStatus();
+    var $status = $('#status')
+    $status.html('End of opening...')
+  });
+
+  getOpenings().then((d) => {
+    openings = d.flat();
+    onDoneFn();
+  });
+
+  $('#hint-button').click(() => {
+    b.nextMove() ? alert(b.nextMove().pieceTarget()) : null;
+  })
+  
+  $('#undo-button').click(() => {
+    b.line_.undo();
+    b.game_.undo();
+    b.board_.position(b.game_.fen())
+  })
 };
 
 

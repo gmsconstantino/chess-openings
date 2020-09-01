@@ -1,5 +1,10 @@
 var getOpenings = function() {
-  return [
-    getOpening_albin()
-  ];
+  return Promise.all([
+    //getOpening_albin(),
+    //getOpening_benkoFullyAccepted(),
+    // getOpening_dutch(),
+    //getOpening_frenchAdvance(),
+    //getOpening_qga()
+    getOpening_test()
+  ]);
 };

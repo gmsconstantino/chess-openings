@@ -1,100 +1,64 @@
 /**
- * @constructor
- * @struct
- * @final
- */
-var Move = function(source, target) {
-  /** @private {string} */
-  this.source_ = source;
-
-  /** @private {string} */
-  this.target_ = target;
-};
-
-
-/**
- * @param {!Move} o
- * @return {boolean}
- */
-Move.prototype.equals = function(o) {
-  return this.source_ == o.source_ && this.target_ == o.target_;
-};
-
-
-/** @return {string} */
-Move.prototype.asString = function() {
-  return this.source_ + '-' + this.target_;
-};
-
-
-/**
- * @constructor
- * @struct
- * @final
- */
-var Line = function(moves, isWhite) {
-  /** @private {!Array.<!Move>} */
-  this.moves_ = moves;
-
-  /** @private {boolean} */
-  this.isWhite_ = isWhite;
-
-  /** @private {number} */
-  this.progress_ = 0;
-};
-
-
-/** @return {Move} */
-Line.prototype.advance = function() {
-  return this.progress_ < this.moves_.length ?
-      this.moves_[this.progress_++] :
-      null;
-};
-
-
-/** @return {boolean} */
-Line.prototype.isComputerMoveNext = function() {
-  return this.progress_ < this.moves_.length &&
-      (this.progress_ % 2 == 0) != this.isWhite_;
-};
-
-
-/**
- * @param {!Move} move
- * @return {boolean}
- */
-Line.prototype.equalsNextMove = function(move) {
-  return this.progress_ < this.moves_.length &&
-      this.moves_[this.progress_].equals(move);
-};
-
-/** @return {boolean} */
-Line.prototype.isDone = function() {
-  return this.progress_ >= this.moves_.length;
-}
-
-
-/**
  * @param {!Function} onDoneFn
  * @constructor
  * @struct
  * @final
  */
 var Board = function(onDoneFn) {
+  /** @private {!Chess} */
+  this.game_ = new Chess();
   /** @private {!ChessBoard} */
   this.board_ = new ChessBoard('board', {
     draggable: true,
     onChange: this.onChange_.bind(this),
     onDrop: this.onDrop_.bind(this),
-    pieceTheme: '../img/wikipedia/{piece}.png'
+    onDragStart: this.onDragStart.bind(this),
+    onMoveEnd: this.onMoveEnd.bind(this),
+    onSnapEnd: this.onSnapEnd.bind(this),
+    pieceTheme: '../img/wikipedia/{piece}.png',
+    // position: 'rnbqkbnr/pp2pppp/2p5/3P4/3P4/8/PPP2PPP/RNBQKBNR b KQkq'
   });
 
   /** @private {Line} */
   this.line_ = null;
 
   /** @private {!Function} */
-  this.onDoneFn_ = onDoneFn;
+  this.onDoneFn_ = onDoneFn;    
 };
+
+Board.prototype.nextMove = function () {
+  return this.line_.nextMove()
+}
+
+// update the board position after the piece snap
+// for castling, en passant, pawn promotion
+Board.prototype.onSnapEnd = function  () {
+  this.board_.position(this.game_.fen())
+}
+
+Board.prototype.onMoveEnd = function () {
+  // console.log('move end board', this.board_.fen())
+  // console.log('move end game', this.game_.fen())
+  // updateStatus()
+  // $fen.html(this.game_.fen())
+  // $pgn.html(this.game_.pgn())
+
+  this.updateStatus()
+}
+
+Board.prototype.makeRandomMove = function() {
+  var possibleMoves = this.game_.moves()
+
+  // exit if the game is over
+  if (this.game_.game_over()) return
+
+  var randomIdx = Math.floor(Math.random() * possibleMoves.length)
+  this.game_.move(possibleMoves[randomIdx])
+  console.log('random move', this.game_.fen())
+  this.board_.position(this.game_.fen())
+
+  window.setTimeout(this.makeRandomMove.bind(this), 500)
+}
 
 
 /**
@@ -103,9 +67,13 @@ var Board = function(onDoneFn) {
  */
 Board.prototype.initialize = function(moves, isWhite) {
   this.line_ = new Line(moves, isWhite);
-  this.board_.start();
-  this.board_.orientation(isWhite ? 'white' : 'black');
+  // this.board_.start();
+  // this.board_.orientation(isWhite ? 'white' : 'black');
+  this.board_.orientation(isWhite);
+  this.board_.position(this.game_.fen())
+  // this.board_.position('rnbqkbnr/pp2pppp/2p5/3P4/3P4/8/PPP2PPP/RNBQKBNR b KQkq')
 };
+
 
 
 /**
@@ -114,39 +82,14 @@ Board.prototype.initialize = function(moves, isWhite) {
  * @private
  */
 Board.prototype.onChange_ = function(oldPos, newPos) {
+  // debugger;
   if (this.line_.isComputerMoveNext()) {
     var computerMoveString = this.line_.advance().asString();
-    var computerMoveFn;
-    if (computerMoveString == 'e1-g1') {
-      // White 0-0
-      computerMoveFn = function() {
-        this.move('e1-g1');
-        this.move('h1-f1');
-      };
-    } else if (computerMoveString == 'e1-c1') {
-      // White 0-0-0
-      computerMoveFn = function() {
-        this.move('e1-c1');
-        this.move('a1-d1');
-      };
-    } else if (computerMoveString == 'e8-g8') {
-      // Black 0-0
-      computerMoveFn = function() {
-        this.move('e8-g8');
-        this.move('h8-f8');
-      };
-    } else if (computerMoveString == 'e8-c8') {
-      // Black 0-0-0
-      computerMoveFn = function() {
-        this.move('e8-c8');
-        this.move('a8-d8');
-      };
-    } else {
-      computerMoveFn = function() {
-        this.move(computerMoveString);
-      };
-    }
-    setTimeout(computerMoveFn.bind(this.board_), 500);
+    computerMoveFn = function() {
+      var x = this.game_.move(computerMoveString, { sloppy: true })
+      this.board_.position(this.game_.fen())
+    };
+    setTimeout(computerMoveFn.bind(this), 500);
   }
 
   if (this.line_.isDone()) {
@@ -154,6 +97,16 @@ Board.prototype.onChange_ = function(oldPos, newPos) {
   }
 };
 
+Board.prototype.onDragStart = function  (source, piece, position, orientation) {
+  // do not pick up pieces if the game is over
+  if (this.game_.game_over()) return false
+
+  // only pick up pieces for the side to move
+  if ((this.game_.turn() === 'w' && piece.search(/^b/) !== -1) ||
+      (this.game_.turn() === 'b' && piece.search(/^w/) !== -1)) {
+    return false
+  }
+}
 
 /**
  * @param {string} source
@@ -164,29 +117,61 @@ Board.prototype.onChange_ = function(oldPos, newPos) {
  * @param {string} orientation
  * @private
  */
-Board.prototype.onDrop_ = function(
-    source, target, piece, newPos, oldPos, orientation) {
-  if (!this.line_.equalsNextMove(new Move(source, target))) {
+Board.prototype.onDrop_ = function(source, target, piece, newPos, oldPos, orientation) {
+  if (!this.line_.isDone() && !this.line_.equalsNextMove(new Move(source, target))) {
     return 'snapback';
   }
-  if (source == 'e1' && target == 'c1') {
-    // White 0-0-0
-    this.board_.move('a1-d1');
-  }
-  if (source == 'e1' && target == 'g1') {
-    // White 0-0
-    this.board_.move('h1-f1');
-  }
-  if (source == 'e8' && target == 'c8') {
-    // Black 0-0-0
-    this.board_.move('a8-d8');
-  }
-  if (source == 'e8' && target == 'g8') {
-    // Black 0-0
-    this.board_.move('h8-f8');
-  }
+
   this.line_.advance();
+
+  var move = this.game_.move({
+    from: source,
+    to: target,
+    promotion: 'q' // NOTE: always promote to a queen for example simplicity
+  })
+
+  // this.board_.position(this.game_.fen())
+
+  // illegal move
+  if (move === null) return 'snapback'
 };
+
+Board.prototype.updateStatus = function () {
+  var status = ''
+
+  var moveColor = 'White'
+  if (this.game_.turn() === 'b') {
+    moveColor = 'Black'
+  }
+
+  // checkmate?
+  if (this.game_.in_checkmate()) {
+    status = 'Game over, ' + moveColor + ' is in checkmate.'
+  }
+
+  // draw?
+  else if (this.game_.in_draw()) {
+    status = 'Game over, drawn position'
+  }
+
+  // game still on
+  else {
+    status = moveColor + ' to move'
+
+    // check?
+    if (this.game_.in_check()) {
+      status += ', ' + moveColor + ' is in check'
+    }
+  }
+
+  var $status = $('#status')
+  var $fen = $('#fen')
+  var $pgn = $('#pgn')
+  $status.html(status)
+  $fen.html(this.game_.fen())
+  $pgn.html(this.game_.pgn())
+}
+
 
 
 var getLinesFromOpening = function(opening, continuations) {

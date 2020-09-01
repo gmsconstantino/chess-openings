@@ -1,0 +1,566 @@
+[
+  {
+    "name": "Caro-Kann Defense",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6"
+  },
+  {
+    "name": "Caro-Kann Defense, 2. d4",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4"
+  },
+  {
+    "name": "Caro-Kann Defense, 2. Nc3",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. Nc3"
+  },
+  {
+    "name": "Caro-Kann Defense, 2. d4 d5",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5"
+  },
+  {
+    "name": "Caro-Kann Defense, 2. Nc3 d5",
+    "eco": "B11",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. Nc3 d5"
+  },
+  {
+    "name": "Caro-Kann Defense, 2. d4 d5 3. Nc3",
+    "eco": "B15",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3"
+  },
+  {
+    "name": "Caro-Kann Defense: Accelerated Panov Attack",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/2P1P3/8/PP1P1PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. c4"
+  },
+  {
+    "name": "Caro-Kann Defense: Accelerated Panov Attack, 2. c4 d5",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/2P1P3/8/PP1P1PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6 2. c4 d5"
+  },
+  {
+    "name": "Caro-Kann Defense: Accelerated Panov Attack, Modern Variation",
+    "eco": "B10",
+    "fen": "rnbqkb1r/pp2pppp/5n2/3P4/8/8/PP1P1PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6 2. c4 d5 3. exd5 cxd5 4. cxd5 Nf6"
+  },
+  {
+    "name": "Caro-Kann Defense: Accelerated Panov Attack, Open Variation",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1p1ppp/2p5/4p3/2P1P3/8/PP1P1PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6 2. c4 e5"
+  },
+  {
+    "name": "Caro-Kann Defense: Accelerated Panov Attack, Pseudo-Scandinavian",
+    "eco": "B10",
+    "fen": "rnb1kbnr/pp2pppp/2p5/3q4/2P5/8/PP1P1PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6 2. c4 d5 3. exd5 Qxd5"
+  },
+  {
+    "name": "Caro-Kann Defense: Accelerated Panov Attack, Van Weersel Attack",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp2pppp/8/3p4/4P3/1Q6/PP1P1PPP/RNB1KBNR b KQkq",
+    "moves": "1. e4 c6 2. c4 d5 3. cxd5 cxd5 4. Qb3"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation, Bayonet Attack",
+    "eco": "B12",
+    "fen": "rn1qkbnr/pp2pppp/2p5/3pPb2/3P2P1/8/PPP2P1P/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. g4"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp2pppp/8/2ppP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 c5"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation, Bronstein Variation",
+    "eco": "B12",
+    "fen": "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/8/PPP1NPPP/RNBQKB1R b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. Ne2"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation, Prins Attack",
+    "eco": "B12",
+    "fen": "rn1qkbnr/pp2pppp/2p5/3pPb2/1P1P4/8/P1P2PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. b4"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12",
+    "fen": "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nf3"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+    "eco": "B12",
+    "fen": "rn1qkbnr/pp2pppp/2p5/3pPb2/3P3P/8/PPP2PP1/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation, Van der Wiel Attack",
+    "eco": "B12",
+    "fen": "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/2N5/PPP2PPP/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nc3"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation, Van der Wiel Attack, 6. Nge2 c5 7. h4",
+    "eco": "B12",
+    "fen": "rn1qkbnr/pp3ppp/4p1b1/2ppP3/3P2PP/2N5/PPP1NP2/R1BQKB1R b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nc3 e6 5. g4 Bg6 6. Nge2 c5 7. h4"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance Variation, Van der Wiel Attack, Dreyev Defense",
+    "eco": "B12",
+    "fen": "rn2kbnr/pp2pppp/1qp5/3pPb2/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nc3 Qb6"
+  },
+  {
+    "name": "Caro-Kann Defense: Advance, Short Variation",
+    "eco": "B12",
+    "fen": "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/2P5/PP2BPPP/RNBQK1NR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. c3 e6 5. Be2"
+  },
+  {
+    "name": "Caro-Kann Defense: Alekhine Gambit",
+    "eco": "B15",
+    "fen": "rnbqkb1r/pp2pppp/2p2n2/8/3PN3/3B4/PPP2PPP/R1BQK1NR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Bd3"
+  },
+  {
+    "name": "Caro-Kann Defense: Breyer Variation",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/4P3/3P4/PPP2PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d3"
+  },
+  {
+    "name": "Caro-Kann Defense: Breyer Variation, Stein Attack",
+    "eco": "B10",
+    "fen": "rnbq1rk1/pp2npbp/2p3p1/3pp3/1P2P3/3P1NP1/P1PN1PBP/R1BQ1RK1 b -",
+    "moves": "1. e4 c6 2. d3 d5 3. Nd2 g6 4. Ngf3 Bg7 5. g3 e5 6. Bg2 Ne7 7. O-O O-O 8. b4"
+  },
+  {
+    "name": "Caro-Kann Defense: Bronstein-Larsen Variation",
+    "eco": "B16",
+    "fen": "rnbqkb1r/pp2pp1p/2p2p2/8/3P4/8/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ gxf6"
+  },
+  {
+    "name": "Caro-Kann Defense: Classical Variation",
+    "eco": "B18",
+    "fen": "rn1qkbnr/pp2pppp/2p5/5b2/3PN3/8/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5"
+  },
+  {
+    "name": "Caro-Kann Defense: Classical Variation, Flohr Variation",
+    "eco": "B18",
+    "fen": "rn1qkbnr/pp2pppp/2p3b1/8/3P4/6NN/PPP2PPP/R1BQKB1R b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. Nh3"
+  },
+  {
+    "name": "Caro-Kann Defense: Classical Variation, Lobron System",
+    "eco": "B19",
+    "fen": "r2qk2r/pp1nbpp1/2p1pn1p/7P/3P4/3Q1NN1/PPPB1PP1/2KR3R w kq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Nf3 Nd7 8. h5 Bh7 9. Bd3 Bxd3 10. Qxd3 e6 11. Bd2 Ngf6 12. O-O-O Be7"
+  },
+  {
+    "name": "Caro-Kann Defense: Classical Variation, Main Line",
+    "eco": "B18",
+    "fen": "rn1qkbnr/pp2pppp/2p3b1/8/3P3P/6N1/PPP2PP1/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4"
+  },
+  {
+    "name": "Caro-Kann Defense: Classical Variation, Maroczy Attack",
+    "eco": "B18",
+    "fen": "rn1qkbnr/pp2pppp/2p3b1/8/3P1P2/6N1/PPP3PP/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. f4"
+  },
+  {
+    "name": "Caro-Kann Defense: Classical Variation, Seirawan Variation",
+    "eco": "B19",
+    "fen": "r2qk2r/pp1n1pp1/2pbpn1p/7P/3P4/3Q1NN1/PPPB1PP1/2KR3R w kq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Nf3 Nd7 8. h5 Bh7 9. Bd3 Bxd3 10. Qxd3 Ngf6 11. Bd2 e6 12. O-O-O Bd6"
+  },
+  {
+    "name": "Caro-Kann Defense: Classical, 7... Nd7",
+    "eco": "B19",
+    "fen": "r2qkbnr/pp1nppp1/2p3bp/8/3P3P/5NN1/PPP2PP1/R1BQKB1R w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Nf3 Nd7"
+  },
+  {
+    "name": "Caro-Kann Defense: Classical, Spassky Variation",
+    "eco": "B19",
+    "fen": "r2qkbnr/pp1nppp1/2p3bp/7P/3P4/5NN1/PPP2PP1/R1BQKB1R b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. Nf3 Nd7 8. h5"
+  },
+  {
+    "name": "Caro-Kann Defense: De Bruycker Defense",
+    "eco": "A40",
+    "fen": "r1bqkbnr/pp1ppppp/n1p5/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 Na6"
+  },
+  {
+    "name": "Caro-Kann Defense: De Bruycker Defense, 2. d4 Na6 3. Nc3 Nc7",
+    "eco": "B12",
+    "fen": "r1bqkbnr/ppnppppp/2p5/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 Na6 3. Nc3 Nc7"
+  },
+  {
+    "name": "Caro-Kann Defense: Edinburgh Variation",
+    "eco": "B12",
+    "fen": "rnb1kbnr/pp2pppp/1qp5/3p4/3PP3/8/PPPN1PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 Qb6"
+  },
+  {
+    "name": "Caro-Kann Defense: Euwe Attack",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/4P3/1P6/P1PP1PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. b3"
+  },
+  {
+    "name": "Caro-Kann Defense: Euwe Attack, Prins Gambit",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp2pppp/8/2pp4/4P3/1P6/PBPP1PPP/RN1QKBNR b KQkq",
+    "moves": "1. e4 c5 2. b3 d5 3. Bb2"
+  },
+  {
+    "name": "Caro-Kann Defense: Exchange Variation",
+    "eco": "B13",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3P4/3P4/8/PPP2PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5"
+  },
+  {
+    "name": "Caro-Kann Defense: Exchange Variation, Bulla Attack",
+    "eco": "B13",
+    "fen": "rnbqkbnr/pp2pppp/8/3p4/3P2P1/8/PPP2P1P/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. g4"
+  },
+  {
+    "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation",
+    "eco": "B13",
+    "fen": "r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/2PB4/PP3PPP/RN1QK1NR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 Nf6 6. Bf4"
+  },
+  {
+    "name": "Caro-Kann Defense: Finnish Variation",
+    "eco": "B16",
+    "fen": "rnbqkbnr/pp2ppp1/2p4p/8/3PN3/8/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 h6"
+  },
+  {
+    "name": "Caro-Kann Defense: Forgacs Variation",
+    "eco": "B15",
+    "fen": "rnbqkb1r/pp3ppp/2p2p2/8/2BP4/8/PPP2PPP/R1BQK1NR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. Bc4"
+  },
+  {
+    "name": "Caro-Kann Defense: Goldman Variation",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/4P3/2N2Q2/PPPP1PPP/R1B1KBNR b KQkq",
+    "moves": "1. e4 c6 2. Nc3 d5 3. Qf3"
+  },
+  {
+    "name": "Caro-Kann Defense: Gurgenidze Counterattack",
+    "eco": "B15",
+    "fen": "rnbqkbnr/p3pppp/2p5/1p1p4/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3 b5"
+  },
+  {
+    "name": "Caro-Kann Defense: Gurgenidze System",
+    "eco": "B15",
+    "fen": "rnbqkbnr/pp2pp1p/2p3p1/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3 g6"
+  },
+  {
+    "name": "Caro-Kann Defense: Hector Gambit",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp2pppp/2p5/6N1/4p3/2N5/PPPP1PPP/R1BQKB1R b KQkq",
+    "moves": "1. e4 c6 2. Nc3 d5 3. Nf3 dxe4 4. Ng5"
+  },
+  {
+    "name": "Caro-Kann Defense: Hillbilly Attack",
+    "eco": "B00",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/2B1P3/8/PPPP1PPP/RNBQK1NR b KQkq",
+    "moves": "1. e4 c6 2. Bc4"
+  },
+  {
+    "name": "Caro-Kann Defense: Hillbilly Attack, Schaeffer Gambit",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp2pppp/2p5/7Q/4p3/1B6/PPPP1PPP/RNB1K1NR b KQkq",
+    "moves": "1. e4 c6 2. Bc4 d5 3. Bb3 dxe4 4. Qh5"
+  },
+  {
+    "name": "Caro-Kann Defense: Karpov Variation",
+    "eco": "B17",
+    "fen": "r1bqkbnr/pp1npppp/2p5/8/3PN3/8/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nd7"
+  },
+  {
+    "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line",
+    "eco": "B17",
+    "fen": "r1bqk2r/pp1n1pp1/2pbp2p/8/3PQ3/3B1N2/PPP2PPP/R1B1K2R b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nd7 5. Ng5 Ngf6 6. Bd3 e6 7. N1f3 Bd6 8. Qe2 h6 9. Ne4 Nxe4 10. Qxe4"
+  },
+  {
+    "name": "Caro-Kann Defense: Karpov Variation, Modern Variation",
+    "eco": "B17",
+    "fen": "r1bqkbnr/pp1npppp/2p5/6N1/3P4/8/PPP2PPP/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nd7 5. Ng5"
+  },
+  {
+    "name": "Caro-Kann Defense: Karpov Variation, Modern Variation, Ivanchuk Defense",
+    "eco": "B17",
+    "fen": "r1bqkbnr/pp2pppp/2p2n2/6N1/3P4/8/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nd7 5. Ng5 Ndf6"
+  },
+  {
+    "name": "Caro-Kann Defense: Karpov Variation, Modern Variation, Kasparov Attack",
+    "eco": "B17",
+    "fen": "r1bqkb1r/pp1npppp/2p2n2/8/3P4/5NN1/PPP2PPP/R1BQKB1R b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 5. Nf3 Ngf6 6. Ng3"
+  },
+  {
+    "name": "Caro-Kann Defense: Karpov Variation, Smyslov Variation",
+    "eco": "B17",
+    "fen": "r1bqkb1r/pp3ppp/1np1pn2/6N1/2BP4/8/PPP1QPPP/R1B1K1NR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nd7 5. Bc4 Ngf6 6. Ng5 e6 7. Qe2 Nb6"
+  },
+  {
+    "name": "Caro-Kann Defense: Karpov Variation, Smyslov Variation, Main Line",
+    "eco": "B17",
+    "fen": "r1bqkb1r/pp3ppp/1np1pn2/6N1/3P4/1B6/PPP1QPPP/R1B1K1NR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nd7 5. Bc4 Ngf6 6. Ng5 e6 7. Qe2 Nb6 8. Bb3"
+  },
+  {
+    "name": "Caro-Kann Defense: Karpov Variation, Tiviakov-Fischer Attack",
+    "eco": "B17",
+    "fen": "r1bqkb1r/pp2pppp/2p2n2/8/2BP4/8/PPP2PPP/R1BQK1NR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nd7 5. Bc4 Ngf6 6. Nxf6+ Nxf6"
+  },
+  {
+    "name": "Caro-Kann Defense: Labahn Attack",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/1P2P3/8/P1PP1PPP/RNBQKBNR b KQkq",
+    "moves": "1. b4 c6 2. e4"
+  },
+  {
+    "name": "Caro-Kann Defense: Labahn Attack, Double Gambit",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp2pppp/2p5/1P1p4/4P3/8/P1PP1PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. b4 d5 3. b5"
+  },
+  {
+    "name": "Caro-Kann Defense: Labahn Attack, Polish Variation",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1p1ppp/2p5/4p3/1P2P3/8/PBPP1PPP/RN1QKBNR b KQkq",
+    "moves": "1. e4 c6 2. b4 e5 3. Bb2"
+  },
+  {
+    "name": "Caro-Kann Defense: Main Line",
+    "eco": "B15",
+    "fen": "rnbqkbnr/pp2pppp/2p5/8/3PN3/8/PPP2PPP/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4"
+  },
+  {
+    "name": "Caro-Kann Defense: Maroczy Variation",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/5P2/PPP3PP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. f3"
+  },
+  {
+    "name": "Caro-Kann Defense: Maroczy Variation, Maroczy Gambit",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp3ppp/2p5/8/2BpP3/5N2/PPP3PP/RNBQK2R b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. f3 dxe4 4. fxe4 e5 5. Nf3 exd4 6. Bc4"
+  },
+  {
+    "name": "Caro-Kann Defense: Masi Variation",
+    "eco": "B10",
+    "fen": "rnbqkb1r/pp1ppppp/2p2n2/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 Nf6"
+  },
+  {
+    "name": "Caro-Kann Defense: Massachusetts Defense",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1pp1pp/2p5/5p2/3PP3/8/PPP2PPP/RNBQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 f5"
+  },
+  {
+    "name": "Caro-Kann Defense: Mieses Attack, Landau Gambit",
+    "eco": "B12",
+    "fen": "rnbqkb1r/pp1npppp/2p1P3/3p4/3P4/3B4/PPP2PPP/RNBQK1NR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Bd3 Nf6 4. e5 Nfd7 5. e6"
+  },
+  {
+    "name": "Caro-Kann Defense: Mieses Gambit",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/4B3/PPP2PPP/RN1QKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Be3"
+  },
+  {
+    "name": "Caro-Kann Defense: Modern Variation",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPPN1PPP/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nd2"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack",
+    "eco": "B13",
+    "fen": "rnbqkbnr/pp2pppp/8/3p4/2PP4/8/PP3PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, 4. c4 Nf6 5. Nc3",
+    "eco": "B13",
+    "fen": "rnbqkb1r/pp2pppp/5n2/3p4/2PP4/2N5/PP3PPP/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, 4. c4 Nf6 5. Nc3 e6",
+    "eco": "B14",
+    "fen": "rnbqkb1r/pp3ppp/4pn2/3p4/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 e6"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, Fianchetto Defense",
+    "eco": "B14",
+    "fen": "rnbqkb1r/pp2pp1p/5np1/3p4/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 g6"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, Fianchetto Defense, Fianchetto Gambit",
+    "eco": "B13",
+    "fen": "rnbqk2r/pp2ppbp/5np1/3P4/3P4/2N5/PP3PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 g6 6. cxd5 Bg7"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, Gunderam Attack",
+    "eco": "B13",
+    "fen": "rnbqkb1r/pp2pppp/5n2/2Pp4/3P4/8/PP3PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. c5"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, Modern Defense",
+    "eco": "B13",
+    "fen": "r1bqkb1r/pp2pppp/2n2n2/3p4/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, Modern Defense, Carlsbad Line",
+    "eco": "B13",
+    "fen": "r1bqkb1r/pp3ppp/2n1pn2/3p2B1/2PP4/2N5/PP3PPP/R2QKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Bg5 e6"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, Modern Defense, Czerniak Line",
+    "eco": "B13",
+    "fen": "r1b1kb1r/pp2pppp/2n2n2/q2p2B1/2PP4/2N5/PP3PPP/R2QKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Bg5 Qa5"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, Modern Defense, Mieses Line",
+    "eco": "B13",
+    "fen": "r2qkb1r/pp2pppp/2n2n2/3p4/2PP2b1/2N2N2/PP3PPP/R1BQKB1R w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Nf3 Bg4"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov Attack, Modern Defense, Reifir-Spielmann Line",
+    "eco": "B13",
+    "fen": "r1b1kb1r/pp2pppp/1qn2n2/3p2B1/2PP4/2N5/PP3PPP/R2QKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Bg5 Qb6"
+  },
+  {
+    "name": "Caro-Kann Defense: Panov-Botvinnik, Herzog Defense",
+    "eco": "B13",
+    "fen": "r1bqkb1r/pp2pppp/5n2/n2P2B1/2p5/2N5/PP3PPP/R2QKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Bg5 dxc4 7. d5 Na5"
+  },
+  {
+    "name": "Caro-Kann Defense: Rasa-Studier Gambit",
+    "eco": "B15",
+    "fen": "rnbqkbnr/pp2pppp/2p5/8/3Pp3/2N2P2/PPP3PP/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. f3"
+  },
+  {
+    "name": "Caro-Kann Defense: Scorpion-Horus Gambit",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp2pppp/2p5/6B1/4p3/2NP4/PPP2PPP/R2QKBNR b KQkq",
+    "moves": "1. e4 c6 2. Nc3 d5 3. d3 dxe4 4. Bg5"
+  },
+  {
+    "name": "Caro-Kann Defense: Spike Variation",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp1ppppp/2p5/8/4P1P1/8/PPPP1P1P/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. g4"
+  },
+  {
+    "name": "Caro-Kann Defense: Spike Variation, Scorpion-Grob Gambit",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp2pppp/2p5/8/4p1P1/2NP4/PPP2P1P/R1BQKBNR b KQkq",
+    "moves": "1. e4 c6 2. g4 d5 3. Nc3 dxe4 4. d3"
+  },
+  {
+    "name": "Caro-Kann Defense: Tartakower Variation",
+    "eco": "B15",
+    "fen": "rnbqkb1r/pp3ppp/2p2p2/8/3P4/8/PPP2PPP/R1BQKBNR w KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6"
+  },
+  {
+    "name": "Caro-Kann Defense: Toikkanen Gambit",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3pP3/2P5/8/PP1P1PPP/RNBQKBNR b KQkq",
+    "moves": "1. e4 c6 2. c4 d5 3. e5"
+  },
+  {
+    "name": "Caro-Kann Defense: Two Knights Attack",
+    "eco": "B10",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/4P3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq",
+    "moves": "1. e4 c6 2. Nc3 d5 3. Nf3"
+  },
+  {
+    "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation",
+    "eco": "B11",
+    "fen": "rn1qkbnr/pp2pppp/2p5/3p4/4P1b1/2N2N2/PPPP1PPP/R1BQKB1R w KQkq",
+    "moves": "1. e4 c6 2. Nc3 d5 3. Nf3 Bg4"
+  },
+  {
+    "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line",
+    "eco": "B11",
+    "fen": "rn1qkbnr/pp2pppp/2p5/3p4/4P3/2N2b1P/PPPP1PP1/R1BQKB1R w KQkq",
+    "moves": "1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3"
+  },
+  {
+    "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Retreat Line",
+    "eco": "B11",
+    "fen": "rn1qkbnr/pp2pppp/2p5/3p3b/4P3/2N2N1P/PPPP1PP1/R1BQKB1R w KQkq",
+    "moves": "1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bh5"
+  },
+  {
+    "name": "Caro-Kann Defense: Ulysses Gambit",
+    "eco": "B12",
+    "fen": "rnbqkbnr/pp2pppp/2p5/6N1/3Pp3/8/PPP2PPP/RNBQKB1R b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nf3 dxe4 4. Ng5"
+  },
+  {
+    "name": "Caro-Kann Defense: von Hennig Gambit",
+    "eco": "B15",
+    "fen": "rnbqkbnr/pp2pppp/2p5/8/2BPp3/2N5/PPP2PPP/R1BQK1NR b KQkq",
+    "moves": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Bc4"
+  }
+]
